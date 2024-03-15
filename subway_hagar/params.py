@@ -189,7 +189,6 @@ class GameParameters:
 
             pygame.display.update()            
     
-    
     def show_game_over_screen(self, final_score):
         game_over = True
 
