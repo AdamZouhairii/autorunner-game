@@ -12,6 +12,7 @@ from human_race.sound import SoundManager
 class GameParameters:
     def __init__(self):
         pygame.init() 
+        pygame.display.init()
         # Paramètres du jeu
         self.screen_sizes = [(800, 600), (1024, 768), (1920, 1080), pygame.display.Info().current_w, pygame.display.Info().current_h]
         self.current_screen_size_index = 0
@@ -140,9 +141,8 @@ class GameParameters:
         self.coin_count += 1
 
     def start_game(self):
-        pygame.init()
-        self.sound_manager.stop_music()
         self.sound_manager.play_game_music()
+        pygame.init()
         
         while True:
             event_list = pygame.event.get()
