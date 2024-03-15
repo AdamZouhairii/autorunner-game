@@ -5,7 +5,6 @@ from mario_mode.gamelib.ezmenu import *
 from mario_mode.gamelib.data import *
 from mario_mode.gamelib.cutscenes import cutscene
 
-
 def RunGame(screen):
     Game(screen)
     play_music("title.ogg", 0.75)

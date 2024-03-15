@@ -11,7 +11,7 @@ from human_race.sound import SoundManager
 
 class GameParameters:
     def __init__(self):
-        pygame.init()
+        pygame.init() 
         # Paramètres du jeu
         self.screen_sizes = [(800, 600), (1024, 768), (1920, 1080), pygame.display.Info().current_w, pygame.display.Info().current_h]
         self.current_screen_size_index = 0
@@ -236,8 +236,9 @@ class GameParameters:
             pygame.display.flip()
 
     def menu_select_game(self):
+        self.sound_manager.play_menu_music()
         while True:
-            self.sound_manager.play_menu_music()
+            
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -288,6 +289,7 @@ class GameParameters:
             
             
     def show_menu(self):
+        self.sound_manager.play_menu_music()
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -296,7 +298,7 @@ class GameParameters:
             
             self.screen.blit(pygame.transform.scale(self.menu_background, (self.width, self.height)), (0, 0))
             font = pygame.font.Font(None, int(0.036 * self.width))  # Adapter la taille de la police
-            self.sound_manager.play_menu_music()
+            
 
             title_text = font.render("Subway hagar", True, (255, 255, 255))
             self.screen.blit(title_text, (self.width/2 - title_text.get_width()/2, self.height * 0.1))
@@ -338,6 +340,7 @@ class GameParameters:
 
             pygame.display.update()            
     def choose_character(self):
+        self.sound_manager.play_menu_music()
         font = pygame.font.Font(None, int(self.width * 0.045))
         mx, my = 0, 0
         arrow_left_text = font.render("<", True, (255, 255, 255))
@@ -589,7 +592,7 @@ class GameParameters:
                     self.volume = max(0, min(1, (mx - volume_bar_x) / volume_bar_length))
                     # Mettre à jour le volume de tous les sons
                     pygame.mixer.music.set_volume(self.volume)
-                    self.menu_sound.set_volume(self.volume)  # Assurez-vous d'ajuster le volume de tous les sons utilisés dans votre jeu
+                    self.sound_manager.set_volume(self.volume)  # Assurez-vous d'ajuster le volume de tous les sons utilisés dans votre jeu
 
 
 
