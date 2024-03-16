@@ -10,6 +10,6 @@ def mario_mode_lunch():
     pygame.init()
     pygame.mouse.set_visible(0)
     pygame.display.set_icon(pygame.image.load(data.filepath("icon.ico")))
-    pygame.display.set_caption("autorunner mario test")
+    pygame.display.set_caption("mario mode")
     screen = pygame.display.set_mode((640, 480))
     menu.Menu(screen)
