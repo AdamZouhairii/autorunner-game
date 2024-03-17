@@ -40,7 +40,8 @@ In "Mario Mode" mode, players take control of a character reminiscent of the ico
 - math
 
 ## Screenshots
-<iframe width="560" height="315" src="show.mp4" frameborder="0"allowfullscreen><iframe>
+<video src='show.mp4' width=500/><video>
+
 
 ## Credits
 - Game developed by [Adam Zouhairi]
