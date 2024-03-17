@@ -40,7 +40,7 @@ In "Mario Mode" mode, players take control of a character reminiscent of the ico
 - math
 
 ## Screenshots
-<iframe width="560" height="315" src="https://github.com/AdamZouhairii/autorunner-game/blob/main/show.mp4" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="show.mp4" frameborder="0"allowfullscreen><iframe>
 
 ## Credits
 - Game developed by [Adam Zouhairi]
