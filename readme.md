@@ -26,9 +26,9 @@ In "Mario Mode" mode, players take control of a character reminiscent of the ico
 7. Enjoy the game and try to achieve the highest score!
 
 ## Controls
-# human race
+### human race
 - **Arrow Keys**: Move character (up, down, left, right)
-# mario mode
+### mario mode
 - **Arrow Keys**: Jump (up)
 - - **Arrow Keys**: Super Jump (up,right)
 
@@ -40,17 +40,20 @@ In "Mario Mode" mode, players take control of a character reminiscent of the ico
 - math
 
 ## Screenshots
-[Insert screenshots or gameplay images here]
+<video width="320" height="240" controls>
+  <source src="show.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture de vidéos.
+</video>
 
 ## Credits
 - Game developed by [Adam Zouhairi]
 
 ## Work parts
-# ADAM
+### ADAM
 - ALL mario mode code
 - sound.py
 - player.py
 - bonus.py
 - obstacle.py
 and a part of params.py
-# RAWAD
+### RAWAD
