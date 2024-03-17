@@ -44,3 +44,13 @@ In "Mario Mode" mode, players take control of a character reminiscent of the ico
 
 ## Credits
 - Game developed by [Adam Zouhairi]
+
+## Work parts
+# ADAM
+- ALL mario mode code
+- sound.py
+- player.py
+- bonus.py
+- obstacle.py
+and a part of params.py
+# RAWAD
