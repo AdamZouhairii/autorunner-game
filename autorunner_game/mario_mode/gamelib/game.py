@@ -318,6 +318,8 @@ class Game(object):
             pygame.sprite.Sprite.kill(s)
 
     def main_loop(self):
+        
+        camera_speed = 3
 
         while self.running:
             BaddieShot.player = self.player
@@ -327,9 +329,11 @@ class Game(object):
             if not self.running:
                 return
 
-            self.boom_timer -= 1
-
+            self.boom_timer -= 0.5
+            camera_speed += 0.001
             self.clock.tick(60)
+            self.camera.rect.x += camera_speed
+            self.player.rect.x += camera_speed
             self.camera.update()
             for s in self.sprites:
                 s.update()    
@@ -517,6 +521,8 @@ class Game(object):
             self.screen.blit(self.bg, ((-self.camera.rect.x/1)%640 - 640, 0))
             self.camera.draw_sprites(self.screen, self.sprites)
             self.draw_stats()
+            if self.player.rect.right < self.player.rect.left:
+                self.player.hit()
             for b in self.bosses:
                 pygame.draw.rect(self.screen, (255, 0, 0), (170, 64, b.hp*60, 32))
                 pygame.draw.rect(self.screen, (0, 0, 0), (170, 64, 300, 32), 1)

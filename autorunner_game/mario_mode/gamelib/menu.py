@@ -16,9 +16,9 @@ def ContinueGame(screen):
 def Help(screen):
     cutscene(screen, ["HELP",
     "",
-    "Move: Arrow Keys",
     "Jump: Arrow key up",
-    "Return: Esc = return",
+    "Super Jump: Arrow keys up/right",
+    "Return: Esc =return (last Esc = exit game not return to menu)",
     "Note: Jump on enemies to kill them!",
     ""])
     
